@@ -1,0 +1,21 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+<h1>Аналитика платформы</h1>
+
+<ul>
+  <li><b>Активных бизнесов:</b> {{ active_businesses }}</li>
+  <li><b>Подключённых точек:</b> {{ total_locations }}</li>
+  <li><b>Позиций на складах:</b> {{ total_inventory_items }}</li>
+  <li><b>Позиций в зоне риска:</b> {{ items_at_risk }}</li>
+  <li><b>Средняя экономия на бизнес:</b> {{ average_savings }} ₸</li>
+  <li><b>Автоматизированных операций:</b> {{ automated_operations }}</li>
+</ul>
+
+<h2>Популярные категории товаров</h2>
+<table>
+  <tr><th>Категория</th><th>Позиций на складах</th></tr>
+  {% for row in top_categories %}
+  <tr><td>{{ row.name }}</td><td>{{ row.count }}</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}

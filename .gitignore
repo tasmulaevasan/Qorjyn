@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.sqlite3
+
+# Secrets
+.env
+
+# Node
+node_modules/
+.next/
+
+# SDD scratch
+.superpowers/
+
+# Editors
+.DS_Store
