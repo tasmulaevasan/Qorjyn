@@ -37,7 +37,7 @@ def handle_message(chat_id, message_type, text):
     business = find_business(chat_id)
     if business is None:
         return (
-            "Ваш номер не зарегистрирован в QORJYN Mesh.\n"
+            "Ваш номер не зарегистрирован в QORJYN.\n"
             "Обратитесь к администратору или зарегистрируйтесь на платформе."
         )
 
@@ -123,7 +123,7 @@ def _product_name(product_id):
 
 def _help():
     return (
-        "📋 QORJYN Mesh — команды:\n\n"
+        "📋 QORJYN — команды:\n\n"
         "📦 «Остатки» — текущие запасы\n"
         "📊 «Тендер» — запрос предложений поставщиков\n"
         "🌊 «Волна» — коллективные закупки\n"

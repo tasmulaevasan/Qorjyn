@@ -1,4 +1,4 @@
-// ============ QORJYN MESH DATA MODELS ============
+// ============ QORJYN DATA MODELS ============
 
 export interface Location {
   id: string;

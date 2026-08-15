@@ -53,7 +53,7 @@ Frontend работает на <http://localhost:3000>, backend — на <http:/
 |---|---|---|
 | `DJANGO_SECRET_KEY` | Секрет Django | обязательно заменить вне dev |
 | `DJANGO_DEBUG` | Режим debug | `true` |
-| `ALLOWED_HOSTS` | Разрешённые host headers | `*` только локально |
+| `ALLOWED_HOSTS` | Разрешенные host headers | `*` только локально |
 | `DATABASE_URL` | Подключение к БД | пусто = SQLite |
 | `GREEN_API_INSTANCE` | ID инстанса Green API | опционально в mock режиме |
 | `GREEN_API_TOKEN` | Токен Green API | опционально в mock режиме |
@@ -88,7 +88,7 @@ cd backend
 .\.venv\Scripts\python.exe manage.py seed_demo
 ```
 
-Команда безопасна для demo-окружения, но очищает и пересоздаёт доменные данные. Django users не удаляются.
+Команда безопасна для demo-окружения, но очищает и пересоздает доменные данные. Django users не удаляются.
 
 ## Django Admin
 
@@ -103,7 +103,7 @@ cd backend
 - <http://localhost:4000/admin/>;
 - <http://localhost:4000/admin/analytics/>.
 
-Доменные журналы в Admin защищены от случайного удаления. Reset demo сохраняет учётную запись администратора.
+Доменные журналы в Admin защищены от случайного удаления. Reset demo сохраняет учетную запись администратора.
 
 ## WhatsApp / Green API
 
@@ -161,7 +161,7 @@ DATABASE_URL=postgresql://user:password@host:5432/qorjyn
 3. `NEXT_PUBLIC_API_URL` заканчивается на `/api`;
 4. порт или запрос не блокируется firewall.
 
-После восстановления API Header автоматически вернётся в `API 4000 LIVE`.
+После восстановления API Header автоматически вернется в `API 4000 LIVE`.
 
 ### Нет demo-данных
 

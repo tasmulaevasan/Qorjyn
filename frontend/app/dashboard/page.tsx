@@ -35,7 +35,7 @@ export default function DashboardPage() {
     return (
       <div className="py-20 flex flex-col items-center justify-center text-center">
         <RefreshCw className="w-10 h-10 text-emerald-400 animate-spin mb-4" />
-        <h3 className="text-base font-bold text-white">Загрузка аналитики QORJYN Mesh...</h3>
+        <h3 className="text-base font-bold text-white">Загрузка аналитики QORJYN...</h3>
       </div>
     );
   }

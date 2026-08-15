@@ -1,4 +1,4 @@
-# QORJYN Mesh — Backend
+# QORJYN — Backend
 
 Django 5.2 + DRF. Порт 4000.
 
@@ -9,7 +9,7 @@ Django 5.2 + DRF. Порт 4000.
 
     python -m venv .venv
     .venv/Scripts/python -m pip install -r requirements.txt
-    cp .env.example .env          # заполнить учётные данные Green API
+    cp .env.example .env          # заполнить учетные данные Green API
     .venv/Scripts/python manage.py migrate
     .venv/Scripts/python manage.py seed_demo
     .venv/Scripts/python manage.py createsuperuser

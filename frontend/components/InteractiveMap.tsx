@@ -77,7 +77,7 @@ export function InteractiveMap() {
             <Zap className="w-4 h-4" />
             <span>Сеть Соседской Взаимовыручки</span>
           </div>
-          <h3 className="text-xl font-extrabold text-white">Интерактивная карта Mesh-узлов Алматы</h3>
+          <h3 className="text-xl font-extrabold text-white">Интерактивная карта узлов сети Алматы</h3>
         </div>
         <div className="flex items-center space-x-2 bg-slate-800/80 p-1.5 rounded-xl border border-slate-700 text-xs">
           <span className="flex items-center space-x-1 px-2 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 font-semibold">

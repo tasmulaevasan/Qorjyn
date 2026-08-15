@@ -1,6 +1,6 @@
-# 🤝 QORJYN Mesh — Multi-Agent Coordination Hub
+# 🤝 QORJYN — Multi-Agent Coordination Hub
 
-Welcome! This repository contains the complete **QORJYN Mesh** B2B collective supply chain platform.
+Welcome! This repository contains the complete **QORJYN** B2B collective supply chain platform.
 
 - **Frontend:** Next.js 14 (App Router), Tailwind CSS, Recharts, Lucide Icons. Located in the root directory.
 - **Backend Specs & Contract:** Detailed API specification and seed data structure for Django backend.

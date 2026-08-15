@@ -6,7 +6,7 @@ import { Header } from '@/components/Header';
 import { Navigation } from '@/components/Navigation';
 
 export const metadata: Metadata = {
-  title: 'QORJYN Mesh — B2B Коллективное Снабжение',
+  title: 'QORJYN — B2B Коллективное Снабжение',
   description: 'Платформа коллективного закупа, ИИ-прогнозирования остатков и предотвращения дефицита для малого бизнеса Алматы',
 };
 
@@ -28,7 +28,7 @@ export default function RootLayout({
             <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-6 text-center text-xs text-slate-500 dark:text-slate-400">
               <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="flex items-center space-x-2">
-                  <span className="font-extrabold text-slate-700 dark:text-slate-300">QORJYN Mesh</span>
+                  <span className="font-extrabold text-slate-700 dark:text-slate-300">QORJYN</span>
                   <span>© 2026 B2B Network. Все права защищены.</span>
                 </div>
                 <div className="flex items-center space-x-4 text-slate-500 dark:text-slate-400">
