@@ -11,7 +11,8 @@ import { initialSeedData } from '@/lib/seedData';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api';
 
-const LOCAL_STORAGE_KEY = 'qorjyn_mesh_state_v1';
+const LOCAL_STORAGE_KEY = 'qorjyn_state_v1';
+const LEGACY_LOCAL_STORAGE_KEY = 'qorjyn_mesh_state_v1';
 
 async function responseError(res: Response, fallback: string): Promise<string> {
   try {
@@ -25,10 +26,15 @@ async function responseError(res: Response, fallback: string): Promise<string> {
 export function getLocalState(): QorjynAppState {
   if (typeof window === 'undefined') return initialSeedData;
   try {
-    const raw = localStorage.getItem(LOCAL_STORAGE_KEY);
+    const currentRaw = localStorage.getItem(LOCAL_STORAGE_KEY);
+    const raw = currentRaw ?? localStorage.getItem(LEGACY_LOCAL_STORAGE_KEY);
     if (!raw) {
       localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(initialSeedData));
       return initialSeedData;
+    }
+    if (!currentRaw) {
+      localStorage.setItem(LOCAL_STORAGE_KEY, raw);
+      localStorage.removeItem(LEGACY_LOCAL_STORAGE_KEY);
     }
     return JSON.parse(raw);
   } catch (e) {
@@ -585,6 +591,7 @@ export async function resetAllData(): Promise<{ success: boolean }> {
   }
   if (typeof window !== 'undefined') {
     localStorage.removeItem(LOCAL_STORAGE_KEY);
+    localStorage.removeItem(LEGACY_LOCAL_STORAGE_KEY);
   }
   return { success: true };
 }

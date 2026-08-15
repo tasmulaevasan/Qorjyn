@@ -17,7 +17,7 @@ interface MapNode {
   emoji: string;
 }
 
-const mockMeshNodes: MapNode[] = [
+const mockNetworkNodes: MapNode[] = [
   {
     id: 'node-1',
     name: 'Арома Coffee (Абая)',
@@ -67,7 +67,7 @@ const mockMeshNodes: MapNode[] = [
 ];
 
 export function InteractiveMap() {
-  const [selectedNode, setSelectedNode] = useState<MapNode | null>(mockMeshNodes[0]);
+  const [selectedNode, setSelectedNode] = useState<MapNode | null>(mockNetworkNodes[0]);
 
   return (
     <div className="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 shadow-xl backdrop-blur-md">
@@ -100,7 +100,7 @@ export function InteractiveMap() {
 
           {/* Node Pins Simulation */}
           <div className="relative w-full h-full">
-            {mockMeshNodes.map((node, index) => {
+            {mockNetworkNodes.map((node, index) => {
               const positions = [
                 { top: '55%', left: '45%' },
                 { top: '30%', left: '60%' },
